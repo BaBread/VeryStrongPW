@@ -1,11 +1,11 @@
 # VeryStrongPW
 Intro to JS Challenge #3
 
-This site generates a password of desired length and content depending on the prompts selected when the page loads. The prompts ask for password length and if special, lower, upper characters, or numbers should be included. When clicking the "Generate Password" button, the password following the defined prompts will be generated into the text field. 
+This site generates a password of desired length and content depending on the prompts selected when the page loads. . When clicking the "Generate Password" button the prompts ask for password length and if special, lower, upper characters, or numbers should be included. The password following the defined prompts will be generated into the text field. 
 
-Extra checks were placed in the prompts to ensure a number is entered for password length and that at least one character type is selected. If one of these situations occurs, it will alert the user to try again. An example of this show in Screenshot 1.
+Extra checks were placed in the prompts to ensure a number is entered for password length and that at least one character type is selected. If one of these situations occurs, it will alert the user to try again. An example of this show in Screenshot 1. In these cases, not only will the user be alerted, but the text field will also be reset to default.
 
-Screenshot 1: ./assets/PromptsScreenshot.png
+Screenshot 1: ![Prompts Image](/Assets/PromptsScreenshot.PNG)
 
 Sources:
 I referred to Daniel Vega's video for guidance on this Challenge regarding prompting, confirming, and alerting:
@@ -13,6 +13,8 @@ I referred to Daniel Vega's video for guidance on this Challenge regarding promp
 https://www.youtube.com/watch?v=v2jfGo7ztm8&ab_channel=DanielVega
 
 This project is published in GitHub pages here:
+
+https://babread.github.io/VeryStrongPW/
 
 
 License

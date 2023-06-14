@@ -16,7 +16,8 @@ function getPrompt() {
   passLength = parseInt(prompt("How many characters do you want this password to be? (8-128 characters)"))
 
   if(isNaN(passLength)||passLength<8 || passLength>128){
-    alert("The length of the pw must be a number and between 8-128 digits. Please try again")
+    alert("The length of the pw must be a number and between 8-128 digits. Please try again");
+    paramArr =[];
     return false
   }
 
@@ -36,7 +37,9 @@ function getPrompt() {
     paramArr = paramArr.concat(numbers);
   }
   if (paramArr.length===0) {
-    alert("No characters were selected. Please try again")
+    alert("No characters were selected. Please try again");
+    paramArr =[];
+    passLength=0;
     return false
   }
 }
@@ -55,9 +58,11 @@ return genPw
 }
 
 // Write password to the #password input
-function writePassword() {
+function writePassword() {;
+  getPrompt();
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  
 
   passwordText.value = password;
 
@@ -67,4 +72,3 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-getPrompt()
