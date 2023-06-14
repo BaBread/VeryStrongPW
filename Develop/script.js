@@ -35,8 +35,24 @@ function getPrompt() {
   if (confirm("Do you want your password to include numbers?")) {
     paramArr = paramArr.concat(numbers);
   }
+  if (paramArr.length===0) {
+    alert("No characters were selected. Please try again")
+    return false
+  }
 }
 
+
+
+
+function generatePassword() {
+  let genPw ="";
+  for (i=0;i<passLength;i++){
+    genPw = genPw + paramArr[Math.floor(Math.random()*paramArr.length)]
+  } 
+
+return genPw
+  
+}
 
 // Write password to the #password input
 function writePassword() {
@@ -47,12 +63,8 @@ function writePassword() {
 
 }
 
-function generatePassword() {
-
-
-
-  
-}
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+getPrompt()
